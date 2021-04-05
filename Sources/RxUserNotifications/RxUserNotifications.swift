@@ -8,7 +8,7 @@
 import RxSwift
 import UserNotifications
 
-extension Reactive where Base: UNUserNotificationCenter {
+public extension Reactive where Base: UNUserNotificationCenter {
 
     /// Requests the notification settings for this app.
     func notificationSettings() -> Observable<UNNotificationSettings> {
