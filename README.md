@@ -13,15 +13,15 @@ Rx wrapper around `UserNotifications`.
             onNext: { settings in print(settings) }
         )
     ```
-    - Request authorization:
+- Request authorization:
 
-        ```swift
-        UNUserNotificationCenter.rx
-            .requestAuthorization(options: [.alert, .sound, .badge])
-            .observe(on: MainScheduler.instance)
-            .subscribe(
-                onNext: { settings in print(settings) }
-            )
-        ```
+    ```swift
+    UNUserNotificationCenter.rx
+        .requestAuthorization(options: [.alert, .sound, .badge])
+        .observe(on: MainScheduler.instance)
+        .subscribe(
+            onNext: { settings in print(settings) }
+        )
+    ```
         
 Author: [@raxityo](https://github.com/raxityo)  
