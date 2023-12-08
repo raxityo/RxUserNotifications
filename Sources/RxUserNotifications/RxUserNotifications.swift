@@ -32,6 +32,7 @@ public extension Reactive where Base: UNUserNotificationCenter {
     }
 
     /// Returns a list of the app’s notifications that are still displayed in Notification Center.
+    @available(tvOS, unavailable)
     func getDeliveredNotifications() -> Observable<[UNNotification]> {
         Observable.create { observe -> Disposable in
             self.base.getDeliveredNotifications { notifications in
